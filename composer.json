@@ -18,10 +18,37 @@
         "symfony/translation": "2.1.*",
         "symfony/twig-bridge": "2.1.*",
         "symfony/validator": "2.1.*",
-        "sami/sami": "*"
+        "sami/sami": "*",
+        "components/jquery": "1.9.*"
     },
     "autoload": {
         "psr-0": { "": "src/" }
+    },
+    "extra": {
+        "component": {
+            "name": "getcomposer",
+            "styles": [
+                "assets/css/base.css"
+            ],
+            "scripts": [
+                "assets/js/libs/timeago.js",
+                "assets/js/base.js"
+            ],
+            "files": [
+                "assets/fonts/*",
+                "assets/img/*",
+                "assets/img/icons/*"
+            ],
+            "shim": {
+                "deps": [
+                    "jquery"
+                ]
+            }
+        }
+    },
+    "config": {
+        "component-dir": "web/components",
+        "component-baseurl": "/web/components"
     },
     "minimum-stability": "dev"
 }
